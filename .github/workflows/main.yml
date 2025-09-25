@@ -63,3 +63,6 @@ jobs:
 
   #     - name: Deploy to S3
   #       run: aws s3 sync ./build/ s3://your-cdn-bucket-name --delete
+
+  #     - name: Deploy to S3
+  #       run: aws s3 sync ./build/ s3://your-cdn-bucket-name --delete
