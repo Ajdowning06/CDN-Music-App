@@ -1,7 +1,25 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+/*
+// Using a simple object for in-memory cache simulation
+const edgeCache = new Map();
+// Cache TTL (Time To Live) in milliseconds (e.g., 5 minutes)
+const CACHE_TTL = 5 * 60 * 1000;
 
+// --- CDN Simulation: Edge Locations ---
+// In a real CDN, these would be separate servers. Here, we simulate by defining
+// the locations and assigning a request to one of them.
+const EDGE_LOCATIONS = [
+    { id: 'NYC-01', region: 'North America', latencyMs: 50 },
+    { id: 'LON-05', region: 'Europe', latencyMs: 80 },
+    { id: 'TOK-12', region: 'Asia', latencyMs: 150 }
+];
+
+
+function simulateGeoRouting(request) {
+    const randomeIndex = Math.floor(Math.random() * EDGE_LOCATIONS.length)
+}*/
 const app = express();
 const port = 3000;
 
