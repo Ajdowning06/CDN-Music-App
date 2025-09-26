@@ -18,7 +18,7 @@ const EDGE_LOCATIONS = [
 
 
 function simulateGeoRouting(request) {
-    const randomeIndex = Math.floor(Math.random() * EDGE_LOCATIONS.length);
+    const randomIndex = Math.floor(Math.random() * EDGE_LOCATIONS.length);
     const selectedEdge = EDGE_LOCATIONS[randomIndex];
 
     console.log(`[Geo-Routing] Request routed to Edge Location: ${selectedEdge.id} (${selectedEdge.region})`);
