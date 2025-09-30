@@ -39,7 +39,7 @@
 \hline
 \textbf{Name} & \textbf{Email Address} \\ \hline
 Aaron Downing         & aaron.downing652@topper.wku.edu         \\ \hline
-Ryerson Brower         & WKU email address2         \\ \hline
+Ryerson Brower         & ryerson.brower178@topper.wku.edu         \\ \hline
 \end{tabular}
 \end{table}
 
@@ -198,7 +198,7 @@ The non-functional requirements of the CDN project establish the quality standar
 \section{DevOps - Continuous Integration and Continuous Delivery Approach and Results}
 %describe your set of practices that enable you to release software quickly, safely, and sustainably by automating the software delivery process, resulting in faster time to market, improved software quality, and enhanced team productivity.
 
-
+The approach we took for our CI and CD we setting up GIT Actions. This really helped us be able to test our files the moment they are updated and see if there is any errors. We leverage GitHub Actions to implement our CI workflow, which automatically triggers a series of vital steps upon every code push. This includes running a fast build process and executing automated unit tests and integration tests. Automating these checks allows us to catch errors and conflicts early, significantly reducing the cost and complexity of fixing issues later in the development cycle. The immediate feedback loop established by Git Actions ensures code quality remains high, making the entire release process inherently safer. Our CD practice focuses on creating a reliable, repeatable path to production. The same automated pipeline used for testing will also handle the process of packaging the application and preparing it for release to staging or production environments. This standardization removes human error and guarantees consistency across deployments, making releases safer and more predictable. This highly reliable, automated process is the primary driver for achieving a faster time to market for new music content and CDN features.
 
 %---------------------------End DevOps - Continuous Delivery Approach and Results-------------------------------------------------
 
@@ -209,7 +209,7 @@ The non-functional requirements of the CDN project establish the quality standar
 \section{DevOps - Architecture Approach, Models, and Results}
 %describe how you designed systems with loosely coupled components, allowing you to work independently, deploy frequently, and scale efficiently, ultimately enabling rapid delivery of software and system reliability.
 
-
+Our CDN project is designed with a loosely coupled architectural approach, where distinct functional components are logically separated. This modular design is the backbone of our ability to work independently, deploy new features frequently, and ensure efficient system scaling while maintaining high reliability. This strategy ultimately enables the rapid delivery of software value. The Content Origin: The source of truth for audio files (the music directory). Its sole purpose is content storage and serving, decoupled from the delivery logic. The Delivery and Routing Layer: This component, simulated by our Edge Cache and Geo-Routing logic in server.js, handles all user interactions. It independently manages caching decisions, routing, and time-to-live (TTL) updates. The Analytic and Monitoring Service: This block autonomously tracks performance metrics (latency, cache hits) via the /analytic endpoint, ensuring that data gathering is separate from content delivery. The independence of these components drives our operational efficiency. Because the routing logic is decoupled from the content storage, we can update the caching algorithm or geo-routing function without requiring a re-deployment or extensive re-testing of the entire Origin content library. This isolation enables frequent and safer deployments.
 
 
 %---------------------------End DevOps - Architecture Approach, Models, and Results-------------------------------------------------
@@ -310,8 +310,7 @@ The non-functional requirements of the CDN project establish the quality standar
 \section{Conclusion}
 %200 words
 %Concluding remarks that summarizes the purpose and outcomes of the technical document.  Discussion of short comings and future work.
-Text goes here.
-
+In conclusion this project went a bit smoother than the first project we did. This may be because we jumped on it a lot faster than the other. We were able to get the hardest part which was the coding done pretty fast. One thing that we could have improved on was the way we implemented the Music App. We not to sure how to make a complete network for the music app so we only used a local host. Similarly for the edge systems we only simulated it with our code that gave us the response time and the predicted edge system, such as New York, Asia, and more. We downloaded two songs, a longer song (around 7 mins) and a shorter song (around 3 mins). Some thing we didn't know how to implement was the ability to download and upload song remotely. So there was a lot we wished we could have polished out but we had to keep our scope pretty small to complete this project. But overall thanks to this project brought a lot of light to what DevOps was and how to use it to our advantage. We will be able to use these skills in the future. 
 %---------------------------End Conclusion Section-------------------------------------
 
 
