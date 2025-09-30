@@ -10,9 +10,12 @@
 \contentsline {section}{\numberline {5}DevOps - Product Management and Monitoring Approach and Results}{3}{section.5}%
 \contentsline {section}{\numberline {6}DevOps - Cultural Approach and Results}{3}{section.6}%
 \contentsline {section}{\numberline {7}Software Testing and Results}{4}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Software Testing Plan Template}{4}{subsection.7.1}%
-\contentsline {section}{\numberline {8}Conclusion}{4}{section.8}%
-\contentsline {section}{\numberline {9}Appendix}{4}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Software Product Build Instructions}{4}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Software Product User Guide}{4}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Source Code with Comments}{4}{subsection.9.3}%
+\contentsline {subsection}{\numberline {7.1}Unit Testing Plan}{4}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Integration Testing Plan}{4}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}System Testing Plan}{5}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Acceptance Testing Plan}{5}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Conclusion}{6}{section.8}%
+\contentsline {section}{\numberline {9}Appendix}{6}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Software Product Build Instructions}{6}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Software Product User Guide}{6}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Source Code with Comments}{6}{subsection.9.3}%

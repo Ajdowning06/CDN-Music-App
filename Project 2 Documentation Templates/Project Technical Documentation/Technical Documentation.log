@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.26)  29 SEP 2025 23:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.26)  29 SEP 2025 23:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -355,20 +355,7 @@ Writing index file "Technical Documentation".idx
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count317
 )
-(./Technical Documentation.aux
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 <
-      <<<<<< HEAD
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-)
+(./Technical Documentation.aux)
 \openout1 = `"Technical Documentation.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -389,7 +376,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
- (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count318
 \scratchdimen=\dimen186
@@ -473,11 +461,6 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-
-[1
-
-{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 38.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -486,13 +469,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 38.
 
 
+[1
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.56 \end{titlepage}
-                     [1] (./Technical Documentation.toc)
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./Technical Documentation.toc)
 \tf@toc=\write5
 \openout5 = `"Technical Documentation.toc"'.
 
@@ -542,31 +522,35 @@ Overfull \hbox (15.22462pt too wide) in paragraph at lines 169--184
 
 [3]
 
-[4] (./Technical Documentation.aux)
+[4]
+
+[5]
+
+[6] (./Technical Documentation.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `"Technical Documentation".out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 8F7B631A09D57FEB0FD0C08C93C82B76;3859.
+(rerunfilecheck)             Checksum: CD8BC2A8A9FDE5EAB05FC65A97C35B59;4313.
  ) 
 Here is how much of TeX's memory you used:
- 11273 strings out of 467800
- 181321 string characters out of 5436061
- 603084 words of memory out of 5000000
- 39761 multiletter control sequences out of 15000+600000
+ 11281 strings out of 467800
+ 181423 string characters out of 5436061
+ 603019 words of memory out of 5000000
+ 39764 multiletter control sequences out of 15000+600000
  631688 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,1377b,482s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,1288b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on "Technical Documentation.pdf" (8 pages, 91141 bytes).
+Output written on "Technical Documentation.pdf" (9 pages, 96251 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 169 words of extra memory for PDF output out of 10000 (max. 10000000)
 

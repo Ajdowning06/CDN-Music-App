@@ -209,8 +209,15 @@ The approach we took for our CI and CD we setting up GIT Actions. This really he
 \section{DevOps - Architecture Approach, Models, and Results}
 %describe how you designed systems with loosely coupled components, allowing you to work independently, deploy frequently, and scale efficiently, ultimately enabling rapid delivery of software and system reliability.
 
-Our CDN project is designed with a loosely coupled architectural approach, where distinct functional components are logically separated. This modular design is the backbone of our ability to work independently, deploy new features frequently, and ensure efficient system scaling while maintaining high reliability. This strategy ultimately enables the rapid delivery of software value. The Content Origin: The source of truth for audio files (the music directory). Its sole purpose is content storage and serving, decoupled from the delivery logic. The Delivery and Routing Layer: This component, simulated by our Edge Cache and Geo-Routing logic in server.js, handles all user interactions. It independently manages caching decisions, routing, and time-to-live (TTL) updates. The Analytic and Monitoring Service: This block autonomously tracks performance metrics (latency, cache hits) via the /analytic endpoint, ensuring that data gathering is separate from content delivery. The independence of these components drives our operational efficiency. Because the routing logic is decoupled from the content storage, we can update the caching algorithm or geo-routing function without requiring a re-deployment or extensive re-testing of the entire Origin content library. This isolation enables frequent and safer deployments.
+Our CDN project uses a loosely coupled design, where each part of the system is separated into clear components. This modular setup makes it easier to work on parts independently, release new features often, and scale the system efficiently while keeping it reliable. It also helps us deliver value faster.
 
+Content Origin: The main source of audio files (the music folder). Its job is only to store and serve content, separate from delivery logic.
+
+Delivery and Routing Layer: Simulated by the Edge Cache and Geo-Routing in server.js, this layer manages caching, routing, and time-to-live (TTL) updates.
+
+Analytics and Monitoring Service: This tracks performance data like latency and cache hits through the /analytic endpoint, keeping monitoring separate from content delivery.
+
+Because these parts are independent, we can update caching or routing without touching the content library. This makes deployments safer and faster, while keeping system efficiency high.
 
 %---------------------------End DevOps - Architecture Approach, Models, and Results-------------------------------------------------
 
@@ -223,9 +230,9 @@ Our CDN project is designed with a loosely coupled architectural approach, where
 \section{DevOps - Product and Process Approach and Results}
 %describe your focus on creating customer-centric, feedback-driven development processes that integrate cross-functional teams, enabling continuous improvement and alignment between product development and business outcomes.
 
-Our approach to implementing the Content Delivery Network (CDN) for the music streaming service emphasizes customer-centric, feedback-driven development. At every stage, we prioritize end-user experience, ensuring low-latency streaming, fast downloads, and seamless access to audio content in multiple formats.
+Our approach to building the Content Delivery Network (CDN) for the music streaming service focuses on being customer-centered and guided by feedback. At each stage, we put the user experience first, making sure streaming has low delay, downloads are fast, and songs can be played smoothly in different formats.
 
-Feedback loops are embedded into the development cycle through performance analytics, user behavior metrics, and direct feedback, allowing iterative refinement of caching strategies, routing logic, and content delivery rules. To support continuous improvement and reliable deployments, we leverage GitHub Actions for automated testing, integration, and deployment pipelines. This enables rapid iteration while maintaining quality and stability. By combining customer insights, cross-functional collaboration, and DevOps automation, our CDN implementation continuously evolves to deliver superior user experiences and scalable, efficient content delivery.
+We built feedback into the development process using performance tracking, user activity data, and direct feedback, which helped us improve caching, routing, and delivery rules step by step. To support steady progress and reliable updates, we used GitHub Actions for automated testing, integration, and deployment. This allowed quick changes while keeping quality and stability. By combining user feedback, teamwork, and DevOps tools, our CDN keeps improving to give better user experiences and more efficient content delivery.
 
 
 
@@ -272,38 +279,108 @@ This culture of trust, collaboration, and experimentation helped the team perfor
 %---------------------------Software Product Testing Section-------------------------------------
 \section{Software Testing and Results}
 
+\subsection{Unit Testing Plan}
 
+\textbf{Test Plan Identifier:} UT-001
 
-%---------------------------Software Testing Plan Template-------------------------------------
+\textbf{Introduction:} Unit testing ensures that individual modules of the CDN (e.g., caching logic, routing function, API endpoints) work correctly in isolation. The objective is to validate correctness, identify defects early, and confirm that each component meets its design specifications.
 
-\subsection{Software Testing Plan Template}
-%Each of the testing levels (unit, Integration, System, Acceptance) should use the following test plan template.
+\textbf{Test item:} The Software Under Test includes caching functions, request-routing algorithms, content update methods, and analytics data collectors. Each module is tested independently before integration with other components.
 
-\textbf{Test Plan Identifier:} %Provides a unique identifier for the test. Every test should have a unique identification number for reference.
+\textbf{Features to test/not to test:} In-scope features are caching rules, request handlers, and analytics logging. Out-of-scope are UI-related functions, as they depend on system-level behavior rather than individual modules.
 
-\textbf{Introduction:} % 50 words. Brief description and objective about the test type.
+\textbf{Approach:} Unit tests use automated frameworks (JUnit, Jest) to validate logic. Tests check cache hits/misses, request routing accuracy, and error handling. Mock data simulates user requests and system responses.
 
-\textbf{Test item:} %50 words. Includes detailed information about the Software Under Test (SUT).
+\textbf{Test deliverables:} Deliverables include automated test scripts, execution logs, and coverage reports that highlight tested code areas and defect detection rates.
 
-\textbf{Features to test/not to test:} %50 words. In scope features. This could be newly added or updated features. Out of scope features not tested. [Provide reasoning for exclusion, like, non-impacted, low priority, etc.]
+\textbf{Item pass/fail criteria:} A unit passes if outputs match expected values under valid and invalid inputs. Failures occur when logic does not meet design requirements.
 
-\textbf{Approach:} %50 words. Strategy to test the software. Includes types of tests and how to test. Functional, performance, security testing using combined [manual + automation], manual only, automation only approach.
+\textbf{Environmental needs:} Local developer environments with IDEs, version control integration (GitHub), and automated CI/CD pipelines with GitHub Actions.
 
-\textbf{Test deliverables:} %50 words. All the deliverables from the testing e.g. approaches, test cases, reports etc.
+\textbf{Responsibilities:} The team is responsible for writing and maintaining unit tests and reviewing coverage.
 
-\textbf{Item pass/fail criteria:} %50 words. Entry and Exit criteria for all items. 
+\textbf{Staffing and training needs:} The team requires familiarity with automated testing tools, mocking frameworks, and writing high-quality, maintainable test cases.
 
-\textbf{Environmental needs:} %50 words. Infrastructure required for SUT and executing test cases.
+\textbf{Schedule:} Unit tests are written alongside development and must pass before merging to the main branch. Execution occurs daily in CI/CD pipelines.
 
-\textbf{Responsibilities:} %50 words. Roles and responsibilities for various testing / supported activities.
+\textbf{Risks and Mitigation:} Risks include incomplete coverage and overlooked edge cases. Mitigation includes peer code reviews, automated coverage analysis, and enforcing minimum thresholds.
 
-\textbf{Staffing and training needs:} %50 words. Training needs to bridge the gap of available and expected skill.
+\textbf{Approvals:} Team approval required.
 
-\textbf{Schedule:} %50 words.  Test schedule should also be noted in the Gantt Chart. Test estimation (Efforts) and high-level schedule. Schedule should be for key deliverables or important milestones. Ideally, all test deliverables included in the test plan should be scheduled.
+\subsection{Integration Testing Plan}
 
-\textbf{Risks and Mitigation:} %100 words. Risk identification for applicable items, assumptions, and mitigation plan.
+\textbf{Test Plan Identifier:} IT-001
 
-\textbf{Approvals:} %Approvals and sign of dates.
+\textbf{Introduction:} Integration testing verifies that modules (e.g., caching, routing, and content updates) interact correctly when combined. The goal is to uncover interface issues and confirm data flow between components.
+
+\textbf{Test item:} CDN caching layer, request-routing engine, analytics collector, and content update service working together in staging environments.
+
+\textbf{Features to test/not to test:} In-scope: cache-to-routing communication, routing-to-analytics logging, and content updates across modules. Out-of-scope: full-scale performance, which belongs to system testing.
+
+\textbf{Approach:} Integration testing combines automated API tests with manual scenario testing to confirm modules exchange data correctly and maintain expected behavior.
+
+\textbf{Test deliverables:} Integration test cases, execution results, error reports, and a final integration test summary.
+
+\textbf{Item pass/fail criteria:} Pass if data is transferred and processed without corruption. Fail if communication breaks or modules produce inconsistent results.
+
+\textbf{Environmental needs:} Staging environment with partial deployment, test CDN nodes, and monitoring tools for log verification.
+
+\textbf{Responsibilities:} The team leads integration execution and debugging identified defects.
+
+\textbf{Staffing and training needs:} Team members must be comfortable with API testing, staging deployment setup, and debugging distributed systems.
+
+\textbf{Schedule:} Conducted after unit testing, with weekly runs during development sprints and before feature merges.
+
+\textbf{Risks and Mitigation:} Risk of mismatched APIs or unexpected data formats. Mitigation through interface contracts, schema validation, and continuous integration checks.
+
+\textbf{Approvals:} Team approval required.
+
+\subsection{System Testing Plan}
+
+\textbf{Test Plan Identifier:} ST-001
+
+\textbf{Introduction:} System testing validates the complete CDN as a whole, ensuring that functional and non-functional requirements are met in realistic conditions.
+
+\textbf{Test item:} Full CDN deployment including caching, routing, content update, analytics, and user-facing streaming/download features.
+
+\textbf{Features to test/not to test:} In-scope: latency under load, multi-format streaming (MP3, AAC, OGG), and security protocols. Out-of-scope: unrelated UI features not tied to CDN delivery.
+
+\textbf{Approach:} System tests combine automated load testing, performance measurement, and manual validation of streaming/download processes. Both functional and non-functional requirements are tested.
+
+\textbf{Test deliverables:} Deliverables include test cases, performance reports, latency graphs, error logs, and system validation summaries.
+
+\textbf{Item pass/fail criteria:} Pass if requirements (e.g., <100 ms response, secure content delivery) are met under expected loads. Fail if KPIs fall below defined thresholds.
+
+\textbf{Environmental needs:} Full deployment environment with edge servers, simulated global traffic, and monitoring dashboards.
+
+\textbf{Responsibilities:} The team executes tests, sets up infrastructure, and fixes identified issues.
+
+\textbf{Staffing and training needs:} The team requires training in load testing tools (JMeter, Locust) and monitoring tools (Grafana, Prometheus).
+
+\textbf{Schedule:} Executed after integration tests and before user acceptance testing. Scheduled for pre-release builds.
+
+\textbf{Risks and Mitigation:} Risks include high load causing server crashes or security vulnerabilities being missed. Mitigation includes stress testing beyond peak loads and automated vulnerability scans.
+
+\textbf{Approvals:} Team approval required.
+
+\subsection{Acceptance Testing Plan}
+
+\textbf{Test Plan Identifier:} AT-001
+
+\textbf{Introduction:} Acceptance testing ensures the CDN meets end-user needs and business goals. It validates that the service performs as expected for real-world use cases.
+
+\textbf{Test item:} Full CDN service in near-production conditions, tested from an end-user perspective for streaming, downloading, and reliability.
+
+\textbf{Features to test/not to test:} In-scope: streaming performance, download reliability, ease of access, and error messaging. Out-of-scope: developer-only internal APIs not exposed to users.
+
+\textbf{Approach:} User-focused testing conducted with manual scenario execution, feedback collection, and trial runs across devices and locations.
+
+\textbf{Test deliverables:} Deliverables include user acceptance criteria, test case execution results, feedback reports, and a final acceptance sign-off.
+
+\textbf{Item pass/fail criteria:} Pass if end-user requirements and business goals are met. Fail if critical functionality or usability concerns remain unresolved.
+
+\textbf{Environmental needs:} Production-like environment with distributed CDN nodes
+
 
 %---------------------------Software Testing Plan Template-------------------------------------
 
