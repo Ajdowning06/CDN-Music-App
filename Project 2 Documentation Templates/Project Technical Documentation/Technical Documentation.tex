@@ -96,10 +96,14 @@ Project Technical Documentation
 % 300 words
 % Description of the project, what the project provides, its purpose, problems solved, and target audience.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet lectus proin nibh nisl condimentum id. Lorem dolor sed viverra ipsum nunc aliquet. Magna fringilla urna porttitor rhoncus dolor. Bibendum at varius vel pharetra vel turpis nunc eget. Fermentum posuere urna nec tincidunt praesent semper. 
-%use blank lines to begin a new paragraph
+The Content Delivery Network (CDN) Implementation project is designed to enhance the performance, scalability, and reliability of a music streaming and download service by caching audio content at multiple geographically distributed edge locations. By leveraging edge caching, the system reduces latency, improves download speeds, and provides a seamless user experience for streaming music, even during peak usage periods. The primary objective is to ensure that users can access audio files quickly and efficiently, regardless of their location or device, while the backend intelligently manages routing, caching, and content delivery.
 
-Nunc congue nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis pellentesque id nibh. Massa tincidunt dui ut ornare lectus. Quisque id diam vel quam elementum. Nunc lobortis mattis aliquam faucibus. Tellus elementum sagittis vitae et. Eget felis eget nunc lobortis mattis aliquam faucibus purus. 
+The system architecture was developed using Node.js for the backend, which provides efficient server-side processing, request handling, and real-time updates to cached content. The frontend was built using HTML, CSS, and JavaScript, creating a responsive and intuitive user interface where users can easily find, stream, and download music. Together, this technology stack ensures a fast, scalable, and user-friendly experience.
+
+Functionally, the CDN caches music files in multiple formats (MP3, AAC, OGG) at edge servers to maximize compatibility with diverse devices and playback applications. Requests are routed intelligently based on a user’s geographical location and network conditions, ensuring minimal streaming latency. Real-time updates allow new releases and content changes to propagate quickly, guaranteeing that users always have access to the latest music. The system also incorporates analytics to track streaming quality, download speeds, and user interactions, providing administrators with actionable insights.
+
+Non-functional requirements focus on ensuring response times under 100 milliseconds, scalability through the addition of edge servers, and industry-standard security protocols such as encryption and authentication. The system also emphasizes seamless usability with clear feedback and error handling. With built-in monitoring and analytics, the CDN can be continuously optimized for performance and efficiency, making it a robust solution for large-scale music distribution.
+
 
 %---------------------------End Project Overview---------------------------------------
 
@@ -131,22 +135,23 @@ Text goes here.
 \begin{tabular}{|l|}
 \hline
 \textbf{Mandatory Functional Requirements} \\ \hline
-Req 1                                      \\ \hline
-Req 2                                      \\ \hline
-Req 3                                      \\ \hline
-                                           \\ \hline
-                                           \\ \hline
+1. The CDN must cache audio files at edge locations to minimize latency for users accessing the music streaming \\ or download service. Cached content should include various formats and qualities to accommodate different user  \\ preferences.                                      \\ \hline
+2. The system must intelligently route requests to the nearest edge location based on user geographical location \\ and network conditions to ensure optimal performance during music streaming or downloads.                                      \\ \hline
+3. The CDN must support real-time content updates, allowing new music releases or changes to existing files \\ to be propagated quickly across edge locations, ensuring that users always access the latest content.                                      \\ \hline
+4. The CDN must be capable of serving audio files in multiple formats (e.g., MP3, AAC, OGG) to accommodate \\ various devices and playback requirements, ensuring compatibility with a wide range of
+client applications.                                           \\ \hline
+5. The system must provide analytics features that track user interactions, streaming quality, and download speeds, \\ allowing administrators to monitor performance and make data-driven improvements.                                           \\ \hline
 \textbf{Extended Functional Requirements}  \\ \hline
-Ext. Req 1                                 \\ \hline
-Ext. Req 2                                 \\ \hline
-Ext. Req 3                                 \\ \hline
+1. The CDN must provide users with the ability to adjust playback options, such as play, pause, and skip, \\ during streaming.                                 \\ \hline
+2. The system must provide users with the option to download songs for offline playback in supported formats.                                 \\ \hline
+3. The CDN must allow users to view recently played or downloaded songs for quick access.                               \\ \hline
                                            \\ \hline
                                            \\ \hline
 \end{tabular}
 \end{table}
 
 % Paragraph (150 words) explaining the need and purpose for the listed Functional Requirements.
-Text goes here.
+The functional requirements of the CDN music application define the core capabilities the system should provide to deliver music efficiently and effectively to users. The CDN is designed to cache audio files at multiple edge servers, reducing latency and improving performance for both streaming and downloads. Requests are routed to the nearest edge location, ensuring that users receive the fastest possible access based on their geographic location and network conditions. The system also supports real-time updates, so new released and modified files are released across the network. Guaranteeing users always have access to the most up-to-date content. Additionally, the CDN serves audio in multiple formats such as MP3, AAC, and OGG to support a wide range of devices and applications. Users can also download songs for offline playback, access recently played or downloaded content, and control playback with basic options such as play, pause, and skip during streaming.
 
 
 %---------------------------End Functional Requirements----------------------------------------------
@@ -164,32 +169,22 @@ Text goes here.
 \begin{tabular}{|l|}
 \hline
 \textbf{Mandatory Non-Functional Requirements} \\ \hline
-Req 1                                      \\ \hline
-Req 2                                      \\ \hline
-Req 3                                      \\ \hline
-                                           \\ \hline
-                                           \\ \hline
+1. The CDN must ensure that the average response time for streaming and download requests is under 100  \\ milliseconds, even during peak usage periods, to provide a seamless user experience.                                      \\ \hline
+2. The system must be designed to handle an increasing number of simultaneous users and requests without  \\ performance degradation, allowing for the addition of new edge servers as user demand grows.                                      \\ \hline
+3. The system must implement industry-standard security protocols to protect user data and audio content, \\ including encryption of data in transit and robust authentication mechanisms to prevent unauthorized access.                                      \\ \hline
+4. The CDN must provide a seamless and intuitive user experience, ensuring that users can easily find, stream, \\ and download music with minimal steps and without confusion, supported by clear feedback and error messaging \\ throughout the process.                                           \\ \hline
+5. The system must provide real-time monitoring and analytics capabilities, allowing administrators to \\ track performance metrics, user interactions, and content delivery efficiency, facilitating ongoing optimization \\ and troubleshooting.                                           \\ \hline
 \textbf{Extended Non-Functional Requirements}  \\ \hline
-Ext. Req 1                                 \\ \hline
-Ext. Req 2                                 \\ \hline
-Ext. Req 3                                 \\ \hline
+1. The system must maintain an uptime of at least 99 percent to ensure high availability of the music \\ streaming and download service.                                 \\ \hline
+2. The system must maintain error rates (e.g., failed requests) below 1 percent to ensure a consistent and reliable \\ user experience.                                 \\ \hline
+3. The CDN must be designed with a responsive user interface so that the service works smoothly on desktops                                 \\ \hline
                                            \\ \hline
                                            \\ \hline
 \end{tabular}
 \end{table}
 
 % Paragraph (150 words) explaining the need and purpose for the listed Non-Functional Requirements.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet lectus proin nibh nisl condimentum id. Lorem dolor sed viverra ipsum nunc aliquet. Magna fringilla urna porttitor rhoncus dolor. Bibendum at varius vel pharetra vel turpis nunc eget. Fermentum posuere urna nec tincidunt praesent semper. 
-%use blank lines to begin a new paragraph
-
-Nunc congue nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis pellentesque id nibh. Massa tincidunt dui ut ornare lectus. Quisque id diam vel quam elementum. Nunc lobortis mattis aliquam faucibus. Tellus elementum sagittis vitae et. Eget felis eget nunc lobortis mattis aliquam faucibus purus. Risus commodo viverra maecenas accumsan lacus vel facilisis. Nullam vehicula ipsum a arcu cursus vitae. Morbi tristique senectus et netus et malesuada.
-%use blank lines to begin a new paragraph
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet lectus proin nibh nisl condimentum id. Lorem dolor sed viverra ipsum nunc aliquet. Magna fringilla urna porttitor rhoncus dolor. Bibendum at varius vel pharetra vel turpis nunc eget. Fermentum posuere urna nec tincidunt praesent semper. 
-%use blank lines to begin a new paragraph
-
-Nunc congue nisi vitae suscipit tellus mauris a. Tellus at urna condimentum mattis pellentesque id nibh. Massa tincidunt dui ut ornare lectus. Quisque id diam vel quam elementum. Nunc lobortis mattis aliquam faucibus. Tellus elementum sagittis vitae et. Eget felis eget nunc lobortis mattis aliquam faucibus purus. Risus commodo viverra maecenas accumsan lacus vel facilisis. Nullam vehicula ipsum a arcu cursus vitae. Morbi tristique senectus et netus et malesuada.
-%use blank lines to begin a new paragraph
+The non-functional requirements of the CDN project establish the quality standards and operational goals that ensure the system’s efficiency, scalability, and reliability. The CDN must provide a fast and seamless experience, maintaining response times under 100 milliseconds, even during peak traffic. Availability is a priority, with the system expected to maintain 99.9 percent uptime, while reliability is ensured by keeping request error rates below 1 percent. Scalability is supported by a design that allows the easy addition of new edge servers as user demand grows. The system also emphasizes security, implementing encryption for data in transit and robust authentication to protect both users and audio content. From a usability perspective, the user interface is designed to be responsive across desktops, tablets, and mobile devices, ensuring accessibility for all. Finally, administrators benefit from real-time monitoring and analytics to track performance, optimize delivery, and troubleshoot issues efficiently.
 
 
 %---------------------------End Non-Functional Requirements---------------------------------------
