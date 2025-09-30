@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.22)  30 SEP 2025 00:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.22)  30 SEP 2025 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -551,6 +551,9 @@ Overfull \hbox (26.47888pt too wide) in paragraph at lines 189--205
  []
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -575,9 +578,9 @@ Overfull \hbox (15.22462pt too wide) in paragraph at lines 223--238
 
 [5]
 
-[6{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[6]
 
-[7]
+[7{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 [8]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
@@ -598,18 +601,18 @@ ed.
 Here is how much of TeX's memory you used:
  13865 strings out of 467800
  216183 string characters out of 5436061
- 946201 words of memory out of 5000000
+ 961203 words of memory out of 5000000
  42097 multiletter control sequences out of 15000+600000
  632321 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,97p,1288b,2121s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,97p,1972b,2121s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publi
 c/cm-super/sftt1000.pfb>
-Output written on "Technical Documentation.pdf" (13 pages, 141337 bytes).
+Output written on "Technical Documentation.pdf" (13 pages, 143428 bytes).
 PDF statistics:
  485 PDF objects out of 1000 (max. 8388607)
  453 compressed objects within 5 object streams
